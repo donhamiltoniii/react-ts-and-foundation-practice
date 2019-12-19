@@ -1,11 +1,7 @@
 import React from "react";
 import { Button, Colors as CustomButtonColors } from "react-foundation";
 
-interface CustomButtonProps {
-  color: "primary" | "secondary" | "success" | "alert" | "warning" | undefined;
-  expanded?: boolean;
-  handleClick?: () => void;
-}
+import { CustomButtonProps } from "../types";
 
 const CustomButton: React.FC<CustomButtonProps> = ({
   children,

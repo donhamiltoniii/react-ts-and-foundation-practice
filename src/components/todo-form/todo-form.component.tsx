@@ -4,9 +4,7 @@ import CustomButton, {
   CustomButtonColors
 } from "../custom-button/custom-button.component";
 
-interface TodoFormProps {
-  onAddTodo: (text: string) => void;
-}
+import { TodoFormProps } from "../types";
 
 const TodoForm: React.FC<TodoFormProps> = ({ onAddTodo }) => {
   const todoInputRef = React.useRef<HTMLInputElement>(null);
@@ -21,7 +19,8 @@ const TodoForm: React.FC<TodoFormProps> = ({ onAddTodo }) => {
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        New Todo: <input type="text" ref={todoInputRef} />
+        New Todo
+        <input type="text" ref={todoInputRef} />
       </label>
       <CustomButton color={CustomButtonColors.PRIMARY}>ADD TODO</CustomButton>
     </form>
